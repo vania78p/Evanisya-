@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Hari Ayah 💖</title>
+  <style>
+    body {
+      background: black;
+      color: pink;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    h1 {
+      font-size: 28px;
+    }
+
+    .sticker {
+      font-size: 60px;
+      margin: 20px;
+    }
+
+    button {
+      padding: 12px 25px;
+      margin: 10px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #yes {
+      background: pink;
+      color: black;
+    }
+
+    #no {
+      background: #222;
+      color: pink;
+      position: absolute;
+    }
+
+    #message {
+      margin-top: 30px;
+      font-size: 22px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sticker">👨‍👧💖✨</div>
+
+  <h1>Apakah kamu sayang Ayah hari ini? 🥺💗</h1>
+
+  <button id="yes">YES 💕</button>
+  <button id="no">NO 😈</button>
+
+  <div id="message">
+    Yeyy! 💖 Ayah pasti bahagia banget! 🥹✨<br>
+    Jangan lupa bilang "Aku sayang Ayah" ya! 👨‍👧💞
+  </div>
+
+  <script>
+    const yesBtn = document.getElementById("yes");
+    const noBtn = document.getElementById("no");
+    const message = document.getElementById("message");
+
+    // kalau klik YES
+    yesBtn.onclick = function() {
+      message.style.display = "block";
+    };
+
+    // tombol NO kabur-kabur 😆
+    noBtn.onmouseover = function() {
+      const x = Math.random() * window.innerWidth - 100;
+      const y = Math.random() * window.innerHeight - 50;
+
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    };
+
+    // kalau tetap berhasil klik NO 😏
+    noBtn.onclick = function() {
+      alert("Eits! Tidak bisa 😝 Kamu harus pilih YES!");
+    };
+  </script>
+
+</body>
+</html>
